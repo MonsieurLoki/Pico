@@ -74,6 +74,7 @@ Done
 - create first version PCB
 
 Todo
+- fix 74LS47 issue !
 - make sure all group members have access to the github repo
 - check everything (project, features, components, PBC, etc)
 - in particular, check PCB 
