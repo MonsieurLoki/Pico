@@ -76,6 +76,8 @@ Done
         ![Alt text](pict/buzzer.png "Buzzer")
 - create github repository
 - create first version PCB
+- tools -> checks ERC (Electronic Rules Check) and DRC (Design Rules Check)
+- add a ground plane
 
 Todo
 - make sure all group members have access to the github repo
@@ -109,33 +111,50 @@ Todo
 
 To be put on the PCB :
 - Pico W
-- DHT-11 sensor
-    - GPIO 0 
-    - VCC (3V3)
-    - GND
-- fan relay
-    - GPIO 1
-    - VCC (3V3)
-    - GND
 - 2x 7-segments DIGIT
     - 7 connections to SN74LS47
     - GND
-- SN74LS47N nr 1
+- SN74LS47N nr 1 (unités)
     - 7 connections to 7-segment
-    - GPIO 2, 3, 4, 5 : 4 bits -> 1 digit
-    - BI/RBO, RBI, LT connected together
-- SN74LS47N nr 2
+    - GPIO 2 (D), 3 (C), 4 (B), 5 (A) : 4 bits -> 1 digit
+    - BI/RBO, RBI, LT connected to VCC
+- SN74LS47N nr 2 (dizaines)
     - 7 connections to 7-segment
-    - GPIO 6, 7, 8, 9 : 4 bits -> 1 digit
-    - BI/RBO, RBI, LT connected together
+    - GPIO 6 (D), 7 (C), 8 (B), 9 (A) : 4 bits -> 1 digit
+    - BI/RBO, RBI, LT connected to VCC
+- fan hbridge
+    - GPIO 14 (ENABLE)
+    - GND
+    - VCC
+    - DIRection : VCC (only one direction for the fan)
 - buzzer
-    - GPIO 10
+    - GPIO 15
     - GND
 - variable resistor
     - VCC
     - GND
-    - GPIO
-optional
+    - ADC 2 (GPIO 28)
+- LCD 1602
+    - VCC
+    - GND
+    - SDA (GPIO 16)
+    - SCL (GPIO 17)
+- DHT-11 sensor
+    - GPIO 18 (signal)
+    - VCC (5V)
+    - GND
+- led red
+    - GPIO 19
+- led red
+    - GPIO 20
+- led red
+    - GPIO 21
+- reserve PINs (just in case)
+    - 1 : GPIO 22
+    - 2 : RUN
+    - 3 : GPIO 26
+    - 4 : GPIO 27
+    - 5 : GPIO 28
 
 
 
