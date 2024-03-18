@@ -16,9 +16,11 @@ Electronique 2 - Projet - Pico W application
 ## Introduction
 
 This is a group project from Ephec students in TI2, Electronics2
+...
 
 ## Features
 
+Project objectives :
 - implement several functionalities on a Raspberry Pi Pico W
 - monitor a temperature sensor and display it on a 2 digit 7-segment
     - use 2 SN74LS47N to drive the 7-segment digits
@@ -33,7 +35,9 @@ This is a group project from Ephec students in TI2, Electronics2
 - optional
     - implement an LCD 1602 display to show additional information
     - buzzer when temperature above MAX
-    - vary the fan speed depending on the temperature
+    - vary the fan speed depending on the temperature (with PWM)
+    - leds to indicate status
+    - potentiometer (ADC) to adjust reference temperature
     - etc
 
 
@@ -74,18 +78,31 @@ Done
 - create first version PCB
 
 Todo
-- fix 74LS47 issue !
 - make sure all group members have access to the github repo
 - check everything (project, features, components, PBC, etc)
 - in particular, check PCB 
-    - schematic : check that each  component individually is connected properly (VCC, GND, GPIO)
-    - board : check that all connections are done properly (top and bottom connections)
+    - schematic : check that each component individually is connected properly (VCC, GND, GPIO)
+    - board : check that all connections are done properly (top and bottom layers, no intersections, no hanging wire, etc)
+    - optimize signals (    )
+    - annotate pinheads on the board
     - ...
+    - check with https://eurocircuits.com 
 - test components individually
     - 7-segments led + 74LS47
     - LCD1602 display
     - onboard temperature sensor
     - ADC (with variable resistor - potentiometer)
+- develop micropython functions to control each component individually, with the GPIOs as planned on the PCB
+    - def getValuePot():
+      (return value between -5 and 5)
+    - def initWifi()
+    - def initWebServer()
+    - def getTemperature()
+    - def adjustFan(speed)
+    - def displayLCDmsg(msg)
+    - def display2digits(value)
+    - ...
+
 
 
 # PCB
