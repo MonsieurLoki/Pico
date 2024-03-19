@@ -11130,6 +11130,7 @@ Source: www.kingbright.com</description>
 </sheets>
 <errors>
 <approved hash="113,1,-36.934,115.466,FRAME1,,,,,"/>
+<approved hash="113,1,23.9465,161.064,POWER-DC-MOTOR,,,,,"/>
 <approved hash="113,1,5.37464,170.305,HBRIDGE,,,,,"/>
 <approved hash="113,1,25.4,153.49,R15,,,,,"/>
 <approved hash="113,1,25.4,150.95,R16,,,,,"/>
@@ -11154,6 +11155,7 @@ Source: www.kingbright.com</description>
 <approved hash="113,1,-76.2,125.55,R2,,,,,"/>
 <approved hash="113,1,-78.74,144.78,R3,,,,,"/>
 <approved hash="113,1,-78.74,148.41,R4,,,,,"/>
+<approved hash="113,1,-58.6571,138.656,JP1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
