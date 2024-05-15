@@ -7,8 +7,8 @@ DATA_PIN = machine.Pin(18, machine.Pin.IN, machine.Pin.PULL_UP)
 
 # Create an instance of the DHT22 sensor
 sensor = dht.DHT11(DATA_PIN)
-temperature = None
-humidity = None
+temperature = -1
+humidity = -1
 
 def read_and_display_data():
 
