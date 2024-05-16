@@ -19,6 +19,9 @@ from machine import Pin, PWM
 import fan_OK_params as params
 import fan_OK_74LS47_7segments as seg7
 import fan_OK_lcd_1602 as lcd
+
+
+
 import fan_OK_dht11 as dht11
 import fan_OK_leds as fan_leds
 import fan_OK_buzzer_PWM as buzzer
